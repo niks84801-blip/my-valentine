@@ -1,36 +1,33 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Valentine ❤️</title>
 <style>
-body {
-  margin:0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg,#ff4e8a,#ff9ecb);
-  color:white;
-  text-align:center;
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff4e8a,#ff9ecb);
+color:white;
+text-align:center;
 }
-.container {
-  padding:20px;
+.container{padding:20px;}
+.slideshow{
+max-width:300px;
+margin:auto;
+border-radius:15px;
+overflow:hidden;
 }
-h1 {
-  font-size:28px;
+.slideshow img{
+width:100%;
+border-radius:15px;
 }
-.message {
-  background: rgba(255,255,255,0.2);
-  padding:20px;
-  border-radius:15px;
-  margin:20px auto;
-  max-width:600px;
-  font-size:18px;
-  line-height:1.6;
-}
-iframe {
-  margin-top:20px;
-  border-radius:12px;
+.message{
+background:rgba(255,255,255,0.2);
+padding:20px;
+border-radius:15px;
+margin-top:20px;
 }
 </style>
 </head>
@@ -38,19 +35,31 @@ iframe {
 <div class="container">
 <h1>❤️ Happy Valentine's Day ❤️</h1>
 
+<div class="slideshow">
+<img id="slide" src="photo1.jpg">
+</div>
+
 <div class="message">
 baby mujhe pta h ki tm bs mere ho but fir bhi puchhna to bnta h na ...
 will u be my valentine forever.. hmesa ke liye...
-or hum kbhi bhi tmko kisi or se replace nhi krna chahte..... I love youuuuuuuu🌹🫂♥️🧿.....
-pta h hmara bht jhagda hota h lekin kuchh bhi ho jye last me aana to tmhare pss hee h naa
-pta nhi kaise itna chipak gye ho mere dil se..... I love you sweetheart 💋😘😘
+I love you sweetheart 💋😘😘
 </div>
 
 <h2>Our Song 🎵</h2>
+
 <iframe src="https://open.spotify.com/embed/track/5bHDGWyIFML1LYXZWTD5MF"
- width="300" height="380" frameborder="0"
- allow="encrypted-media"></iframe>
+width="300" height="380" frameborder="0"></iframe>
 
 </div>
+
+<script>
+let images=["photo1.jpg","photo2.jpg","photo3.jpg","photo4.jpg","photo5.jpg"];
+let i=0;
+setInterval(function(){
+i=(i+1)%images.length;
+document.getElementById("slide").src=images[i];
+},2000);
+</script>
+
 </body>
 </html>
